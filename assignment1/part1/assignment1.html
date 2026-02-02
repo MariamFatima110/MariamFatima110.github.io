@@ -1,30 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<a href="./index.html">home</a>
-	<title>Re: Eileen Dover university application</title>
+    <meta charset="utf-8">
+    <title>Re: Eileen Dover university application</title>
+
+
 	<!--
 		Name: Mariam Fatima
 		File: assignment1
 		Date: 20 january, 2026
 		This is for assignment 1 where I will be adding tags to a resume to make it match the final result provided
 	-->
+
+<style>
+    body {
+    font: 1.2em / 1.5 system-ui;
+    }
+
+    .sender-column {
+    text-align: right;
+    }
+
+    h1 {
+    font-size: 1.5em;
+    }
+
+    h2 {
+    font-size: 1.3em;
+    }
+</style>
+
 </head>
 <body>
-<strong><p style="text-align: right;">Dr. Eleanor Gaye</strong>
-<em><address>>Awesome Science faculty
-University of Awesome
-Bobtown, CA 99999,
-USA</address></em>
+<address style="text-align: right;"><strong>Dr. Eleanor Gaye</strong><br>
+<em>Awesome Science faculty</em><br>
+University of Awesome<br>
+Bobtown, CA 99999,<br>
+USA
+</address>
 
-<strong>Tel</strong>: 123-456-7890
-<strong>Email</strong>: no_reply@example.com
+<div style="text-align: right;">
+    <p style="margin: 0;"><em><strong>Tel</strong>: 123-456-7890</em></p>
+    <p style="margin: 0;"><em><strong>Email</strong>: no_reply@example.com</em></p>
+</div>
 
-20 January 2016</p>
+<p style="text-align: right;"><time datetime="2016-01-20"> 20 January 2016</time></p>
 
-<em><strong>Miss Eileen Dover</strong>
-<address>4321 Cliff Top Edge
-Dover, CT9 XXX
-UK</address></em>
+<em><strong>Miss Eileen Dover</strong></em>
+<address><em>4321 Cliff Top Edge</em></address>
+<address><em>Dover, CT9 XXX</em></address>
+<address><em>UK</em></address>
 
 <h1>Re: Eileen Dover university application</h1>
 
@@ -42,9 +67,9 @@ however it would suit us better if you could start at the beginning of a
 semester; the start dates for each one are as follows:</p>
 
 <ul>
-  <li>First semester: 9 September 2016</li>
-  <li>Second semester: 15 January 2017</li>
-  <li>Third semester: 2 May 2017</li>
+  <li>First semester: <time datetime="2016-09-09">9 September 2016</time></li>
+  <li>Second semester: <time datetime="2017-01-15">15 January 2017</time></li>
+  <li>Third semester: <time datetime="2011-05-02">2 May 2017</time></li>
 </ul>
 
 <p>Please let me know if this is ok, and if so which start date you would
@@ -59,7 +84,6 @@ just the kind of person we'd like to have on our team. Saying that, of the
 ideas you submitted we were most intrigued by are as follows, in order of
 priority:</p>
 
-<p>H<sub>2</sub>O is water.</p>
 	
 <ol>
   <li>Turning H<sub>2</sub>O into wine, and the health benefits of Resveratrol
@@ -83,29 +107,32 @@ other resources, and anything else you think we'd need to know? Thanks.</p>
 <em>did</em> study exotic tribal dances. To answer your question, my
 favorite dances are as follows, with definitions:
 </p>
-<p>Polynesian chicken dance
-    A little known but <em>very</em> influential dance dating back as far as
+<dl>
+<dt>Polynesian chicken dance</dt>
+    <dd>A little known but <em>very</em> influential dance dating back as far as
     300 <abbr title="Before Common Era">BCE</abbr>, a whole village would
     dance around in a circle like chickens, to encourage their livestock to
-    be "fruitful".
-Icelandic brownian shuffle
-    Before the Icelanders developed fire as a means of getting warm, they
+    be "fruitful".</dd>
+<dt>Icelandic brownian shuffle</dt>
+    <dd>Before the Icelanders developed fire as a means of getting warm, they
     used to practice this dance, which involved huddling close together in a
     circle on the floor, and shuffling their bodies around in imperceptibly
     tiny, very rapid movements. One of my fellow students used to say that
-    he thought this dance inspired modern styles such as Twerking.
-Arctic robot dance
-    An interesting example of historic misinformation, English explorers in
+    he thought this dance inspired modern styles such as Twerking.</dd>
+<dt>Arctic robot dance</dt>
+    <dd>An interesting example of historic misinformation, English explorers in
     the 1960s believed to have discovered a new dance style characterized by
     "robotic", stilted movements, being practiced by inhabitants of Northern
     Alaska and Canada. Later on however it was discovered that they were
-    just moving like this because they were really cold.</p>
+    just moving like this because they were really cold.</dd>
+</dl>
 
 <p>Yours sincerely,</p>
 
 <p>Dr Eleanor Gaye</p>
 
-<p>University of Awesome motto: <blockquote>"Be awesome to each other."</blockquote> --
-<cite>The memoirs of Bill S Preston, Esq.</cite></p>
+<p>University of Awesome motto: "Be awesome to each other." --
+<cite>The memoirs of Bill S Preston, <abbr title="Esquire">Esq</abbr>.</cite></p>
 </body>
 </html>
+
