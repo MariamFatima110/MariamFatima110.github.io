@@ -8,6 +8,37 @@ Assignment 4 Part 2 -->
 <html lang="en"> 
 <head> 
 <meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width">
+<title>Bouncing balls</title>
 <link rel="stylesheet" href="css.css">
 <title></title>
 </head>
+
+  <body>
+    <h1>bouncing balls</h1>
+    <canvas></canvas>
+
+    <script>
+        // setup canvas
+
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+
+// function to generate random number
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// function to generate random color
+
+function randomRGB() {
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
+    </script>
+
+  </body>
+</html>
