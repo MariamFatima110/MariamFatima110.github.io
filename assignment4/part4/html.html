@@ -77,21 +77,20 @@ class Ball {
   }
 
 
-  collisionDetect() {
-    for (const ball of balls) {
-        if (!(this === ball) && ball.exists) {
-        const dx = this.x - ball.x;
-        const dy = this.y - ball.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+collisionDetect() {
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
-        }
-        }
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
       }
     }
+  }
 }
-
+}
 
 
 const balls = [];
@@ -106,7 +105,7 @@ while (balls.length < 25) {
     random(-7, 7),
     random(-7, 7),
     randomRGB(),
-    size,
+    size
   );
 
   balls.push(ball);
@@ -115,16 +114,16 @@ while (balls.length < 25) {
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "a":
-      this.x -= this.velX;
+      testBall.x -= 10;
       break;
     case "d":
-      this.x += this.velX;
+      testBall.x += 10;
       break;
     case "w":
-      this.y -= this.velY;
+      testBall.y -= 10;
       break;
     case "s":
-      this.y += this.velY;
+      testBall.y += 10;
       break;
   }
 });
@@ -134,7 +133,7 @@ const testBall = new Ball(50, 100, 4, 4, "blue", 10);
 testBall.x;
 testBall.size;
 testBall.color;
-testBall.draw();
+
 
 
 function loop() {
@@ -146,6 +145,7 @@ function loop() {
     ball.update();
     ball.collisionDetect();
   }
+  testBall.draw();
 
   requestAnimationFrame(loop);
 }
