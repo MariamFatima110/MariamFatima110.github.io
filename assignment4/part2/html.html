@@ -9,6 +9,7 @@ Assignment 4 Part 2 -->
 <html lang="en"> 
 <head> 
 <meta charset="utf-8"> 
+<link rel="stylesheet" href="css.css">
 </head>
 
 <body>
@@ -25,14 +26,13 @@ Assignment 4 Part 2 -->
 </div>
 
 <div class="thumb-bar"></div>
-
 <script>
 const images = [
     {filename: "pic1.jpg", alt: "Closeup of a human eye"},
     {filename: "pic2.jpg", alt: "Brown stone"},
-    {filename: "pic1.jpg", alt: "Violet flowers"},
-    {filename: "pic1.jpg", alt: "Egyptian civilization picture"},
-    {filename: "pic1.jpg", alt: "Butterfly on a green leaf"}
+    {filename: "pic3.jpg", alt: "Violet flowers"},
+    {filename: "pic4.jpg", alt: "Egyptian civilization picture"},
+    {filename: "pic5.jpg", alt: "Butterfly on a green leaf"}
 ];
 function updateDisplayedImage(event) {
     const clickedImage = event.target;
@@ -42,30 +42,35 @@ function updateDisplayedImage(event) {
 }
 
 const displayedImage = document.querySelector(".displayed-img");
+
 const thumbBar = document.querySelector(".thumb-bar");
-const baseURL = "https://mdn.github.io/shared-assets/images/examples/learn/gallery/"
+const baseURL = "https://mdn.github.io/shared-assets/images/examples/learn/gallery/";
 
 for (const image of images) {
     const newImage = document.createElement("img");
     newImage.src = baseURL + image.filename;
     newImage.alt = image.alt;
     newImage.setAttribute("tabindex", "0");
-    newImage.addEventListener("click", updateDisplayedImage);
+    newImage.addEventListener("click", (updateDisplayedImage));
+    newImage.addEventListener("keydown", (e) => {
+        if (e.code === "Enter")
+        updateDisplayedImage(e);
+    })
     thumbBar.appendChild(newImage)
 }
 
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
-btn.addEventListener("click", function() {
+btn.addEventListener("click", () => {
     if (btn.classList.contains("dark")) {
         btn.textContent = "Lighten";
         overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
         btn.classList.remove("dark");
     }
     else {
-        bt.textContent = "Darken";
-        overlay.style.backgroundColor = "rgb (0 0 0 / 0)";
+        btn.textContent = "Darken";
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
         btn.classList.add("dark");
     }
     });
