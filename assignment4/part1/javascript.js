@@ -34,8 +34,10 @@ function returnRandomStoryString() {
 generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
+    let newStory = returnRandomStoryString();
+
   if (customName.value !== "") {
-    const name = customName.value;
+    newStory = newStory.replace("Bob", customName.value);
   }
 
   if (document.getElementById("uk").checked) {
